@@ -17,7 +17,7 @@ interface TeamMember {
 // ── Data ─────────────────────────────────────────────────
 const TEAM: TeamMember[] = [
   {
-    name: 'Martín Cortéz',
+    name: 'Martín Cortés',
     role: 'Ing. Sistemas Computacionales',
     school: 'ESCOM · IPN',
     initials: 'AR',
