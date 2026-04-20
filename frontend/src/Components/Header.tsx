@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import type { JSX } from 'react'
 import './Header.css'
+import mcpLogo from '../assets/mcpLogo.jpeg'
 
 interface NavLink {
   label: string
@@ -29,9 +30,12 @@ const Header = (): JSX.Element => {
 
         {/* Logo */}
         <a href="#inicio" className="header__logo">
-          <span className="header__logo-icon">⬡</span>
+          <span className="header__logo-icon">
+            <img src={mcpLogo} alt="MCP MX" className="header__logo-img" />
+            <span className="header__logo-hex" aria-hidden="true">⬡</span>
+          </span>
           <span className="header__logo-text">
-            MCP<span className="header__logo-accent"> CDMX</span>
+            MCP<span className="header__logo-accent"> MX</span>
           </span>
         </a>
 
