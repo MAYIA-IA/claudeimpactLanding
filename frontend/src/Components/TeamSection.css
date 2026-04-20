@@ -64,6 +64,13 @@
   gap: 2rem;
 }
 
+.team__grid .member-card:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+  max-width: 50%;
+  margin: 0 auto;
+  width: 100%;
+}
+
 /* Member card */
 .member-card {
   display: flex;
