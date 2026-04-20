@@ -1,0 +1,252 @@
+.mayia {
+  position: relative;
+  padding: 8rem 0;
+  overflow: hidden;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.mayia__grid-lines {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(218,119,86,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(218,119,86,0.03) 1px, transparent 1px);
+  background-size: 80px 80px;
+  pointer-events: none;
+}
+
+.mayia__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+/* Copy */
+.mayia__eyebrow {
+  display: block;
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--claude-coral);
+  margin-bottom: 0.75rem;
+}
+
+.mayia__title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+}
+
+.mayia__desc {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.75;
+  margin-bottom: 1rem;
+}
+
+.mayia__link {
+  color: var(--claude-coral);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.mayia__link:hover { color: var(--claude-peach); }
+
+/* Pillars */
+.mayia__pillars {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-left: 3px solid var(--claude-coral);
+  border-radius: 6px;
+}
+
+.mayia__pillar {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.mayia__pillar-icon {
+  font-size: 1.2rem;
+  color: var(--claude-coral);
+  flex-shrink: 0;
+  width: 1.6rem;
+  text-align: center;
+}
+
+.mayia__pillar-label {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--text-primary);
+}
+
+.mayia__pillar-desc {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+}
+
+/* CTA */
+.mayia__cta {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  color: var(--claude-coral);
+  border: 1.5px solid var(--claude-coral);
+  padding: 0.65rem 1.4rem;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+.mayia__cta:hover {
+  background: var(--claude-coral);
+  color: var(--bg-void);
+  box-shadow: var(--glow-coral);
+}
+
+/* Visual / Code card */
+.mayia__visual {
+  position: relative;
+}
+
+.mayia__card {
+  background: var(--bg-card);
+  border: 1px solid rgba(218,119,86,0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+  animation: float 6s ease-in-out infinite;
+}
+
+.mayia__card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1rem;
+  background: rgba(218,119,86,0.06);
+  border-bottom: 1px solid rgba(218,119,86,0.1);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  letter-spacing: 0.06em;
+}
+
+.mayia__card-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.mayia__card-dot--r { background: #FF5F56; }
+.mayia__card-dot--y { background: #FFBD2E; }
+.mayia__card-dot--g { background: #27C93F; }
+
+.mayia__card-body {
+  padding: 1.5rem;
+}
+
+.mayia__code {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  white-space: pre;
+  overflow-x: auto;
+}
+
+.mayia__code strong { color: var(--claude-peach); }
+
+/* Floating badges */
+.mayia__badge {
+  position: absolute;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--claude-coral);
+  border: 1.5px solid rgba(218,119,86,0.4);
+  padding: 0.3rem 0.7rem;
+  border-radius: 4px;
+  background: rgba(10,10,15,0.9);
+  backdrop-filter: blur(8px);
+}
+
+.mayia__badge--1 { top: -14px; left: 30px; animation: float 4s ease-in-out infinite; }
+.mayia__badge--2 { bottom: -14px; right: 40px; animation: float 5s 1s ease-in-out infinite; }
+.mayia__badge--3 { top: 40%; right: -16px; animation: float 4.5s 0.5s ease-in-out infinite; }
+
+/* ── Footer ── */
+.footer {
+  border-top: 1px solid var(--border-subtle);
+  padding: 2rem 0;
+}
+
+.footer__inner {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.footer__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.footer__logo-icon {
+  color: var(--claude-coral);
+  font-size: 1rem;
+  animation: spin-slow 12s linear infinite;
+  display: inline-block;
+}
+
+.footer__copy {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+  flex: 1;
+  text-align: center;
+}
+
+.footer__links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer__links a {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.footer__links a:hover { color: var(--claude-peach); }
+
+@media (max-width: 900px) {
+  .mayia__inner {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .mayia__visual { display: none; }
+}
+
+@media (max-width: 600px) {
+  .footer__inner { flex-direction: column; text-align: center; }
+  .footer__copy { flex: none; }
+}

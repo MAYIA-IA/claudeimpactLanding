@@ -1,0 +1,152 @@
+/* =============================================
+   CDMX MCP Server — Global Styles
+   Claude Color Palette
+   ============================================= */
+
+:root {
+  /* Claude Brand Colors */
+  --claude-coral:     #DA7756;
+  --claude-orange:    #E8956D;
+  --claude-peach:     #F2C0A7;
+  --claude-warm:      #F5D5C8;
+  --claude-cream:     #FAF0EB;
+
+  /* Dark palette */
+  --bg-void:          #0A0A0F;
+  --bg-dark:          #0F0F18;
+  --bg-card:          #131320;
+  --bg-card-hover:    #1A1A2E;
+  --border-glow:      rgba(218, 119, 86, 0.25);
+  --border-subtle:    rgba(255,255,255,0.07);
+
+  /* Text */
+  --text-primary:     #F0EDE8;
+  --text-secondary:   #A8A4A0;
+  --text-muted:       #6B6860;
+
+  /* Fonts */
+  --font-display:     'Syne', sans-serif;
+  --font-mono:        'Space Mono', monospace;
+  --font-body:        'IBM Plex Sans', sans-serif;
+
+  /* Glow effects */
+  --glow-coral:       0 0 30px rgba(218, 119, 86, 0.4);
+  --glow-soft:        0 0 60px rgba(218, 119, 86, 0.15);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--bg-void);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-dark); }
+::-webkit-scrollbar-thumb { background: var(--claude-coral); border-radius: 3px; }
+
+/* Selection */
+::selection {
+  background: rgba(218, 119, 86, 0.35);
+  color: var(--text-primary);
+}
+
+/* Typography helpers */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  line-height: 1.15;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Section padding */
+section {
+  position: relative;
+}
+
+/* Utility classes */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--claude-orange) 0%, var(--claude-peach) 60%, #fff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.mono {
+  font-family: var(--font-mono);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(218,119,86,0.3); }
+  50%       { box-shadow: 0 0 50px rgba(218,119,86,0.6); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-10px); }
+}
+
+@keyframes scan {
+  0%   { transform: translateY(-100%); }
+  100% { transform: translateY(100vh); }
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
