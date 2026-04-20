@@ -1,4 +1,4 @@
-import './HeroSection.css'
+import './Herosection.css'
 import type { JSX } from 'react'
 
 interface Stat {
