@@ -45,15 +45,6 @@ const GitHubIcon = (): JSX.Element => (
   </svg>
 )
 
-const EscomIcon = (): JSX.Element => (
-  <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
-    <circle cx="18" cy="18" r="14" stroke="currentColor" strokeWidth="1.8" />
-    <path d="M10 23l8-12 8 12" stroke="currentColor" strokeWidth="1.5"
-      strokeLinecap="round" strokeLinejoin="round" />
-    <line x1="13" y1="19" x2="23" y2="19" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" />
-  </svg>
-)
-
 // ── Data — stores component refs, not JSX ───────────────
 interface LogoItem {
   name: string
@@ -67,7 +58,7 @@ const LOGOS: LogoItem[] = [
   { name: 'MCP Protocol',      href: 'https://modelcontextprotocol.io/',        Icon: MCPIcon         },
   { name: 'FLAI · Nube',       href: 'https://mayia.mx/',                      Icon: FlaiIcon        },
   { name: 'GitHub',            href: 'https://github.com/mayia-team-hack',     Icon: GitHubIcon      },
-  { name: 'ESCOM · IPN',       href: 'https://www.escom.ipn.mx/',              Icon: EscomIcon       },
+  
 ]
 
 // ── Component ────────────────────────────────────────────
