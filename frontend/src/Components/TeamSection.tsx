@@ -58,7 +58,7 @@ const TEAM: TeamMember[] = [
   },
   {
     name: 'Dr. Carlos Reyes',
-    role: 'Especialista en IA Aplicada',
+    role: 'Strategic Advisor',
     school: 'ADA-CIDE',
     initials: 'CR',
     color: '#E8956D',
