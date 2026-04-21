@@ -38,8 +38,9 @@ const CODE_PREVIEW = `{
   "members": [
     "ISC · ESCOM",
     "Ing. IA · ESCOM",
-    "AI Developer",
-    "AI Developer"
+    "Lic. Matemáticas · UNAM",
+    "Lic. Física y Matemáticas · ESFM",
+    "Dr. Ciencias de la Computación · ADA-CIDE"
   ],
   "status": "active"
 }`
