@@ -1,0 +1,121 @@
+.logo-carousel {
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+  padding: 2.5rem 0 2rem;
+  background: linear-gradient(
+    180deg,
+    rgba(218, 119, 86, 0.03) 0%,
+    transparent 100%
+  );
+  overflow: hidden;
+}
+
+.logo-carousel__label {
+  text-align: center;
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 1.75rem;
+}
+
+.logo-carousel__mask {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    black 12%,
+    black 88%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    black 12%,
+    black 88%,
+    transparent 100%
+  );
+}
+
+.logo-carousel__track {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  width: max-content;
+  animation: logo-scroll 28s linear infinite;
+}
+
+.logo-carousel__track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes logo-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.logo-carousel__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.85rem 2.5rem;
+  border-right: 1px solid var(--border-subtle);
+  text-decoration: none;
+  transition: background 0.2s, border-color 0.2s;
+  cursor: pointer;
+  min-width: 140px;
+}
+
+.logo-carousel__item:first-child {
+  border-left: 1px solid var(--border-subtle);
+}
+
+.logo-carousel__item:hover {
+  background: rgba(218, 119, 86, 0.06);
+}
+
+.logo-carousel__item:hover .logo-carousel__icon svg path,
+.logo-carousel__item:hover .logo-carousel__icon svg polygon,
+.logo-carousel__item:hover .logo-carousel__icon svg circle,
+.logo-carousel__item:hover .logo-carousel__icon svg line,
+.logo-carousel__item:hover .logo-carousel__icon svg text {
+  stroke: var(--claude-peach);
+  fill: var(--claude-peach);
+  transition: stroke 0.2s, fill 0.2s;
+}
+
+.logo-carousel__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  opacity: 0.75;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.logo-carousel__item:hover .logo-carousel__icon {
+  opacity: 1;
+  transform: scale(1.08);
+}
+
+.logo-carousel__name {
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: color 0.2s;
+}
+
+.logo-carousel__item:hover .logo-carousel__name {
+  color: var(--claude-peach);
+}
+
+@media (max-width: 600px) {
+  .logo-carousel__item {
+    padding: 0.7rem 1.8rem;
+    min-width: 110px;
+  }
+}

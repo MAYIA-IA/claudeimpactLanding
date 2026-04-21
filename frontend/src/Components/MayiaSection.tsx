@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react'
 import './MayiaSection.css'
 import type { JSX } from 'react'
+import LogoCarousel from './LogoCarousel'
 
 // ── Types ────────────────────────────────────────────────
 interface Pillar {
@@ -137,6 +138,9 @@ const MayiaSection = (): JSX.Element => {
           </div>
         </div>
       </section>
+
+      {/* ── Logo carousel ───────────────────────── */}
+      <LogoCarousel />
 
       {/* ── Footer ───────────────────────────────── */}
       <footer className="footer">
