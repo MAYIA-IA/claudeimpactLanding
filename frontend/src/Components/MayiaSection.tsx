@@ -148,7 +148,7 @@ const MayiaSection = (): JSX.Element => {
           <div className="footer__logo">
             <span className="footer__logo-icon">⬡</span>
             <span className="mono">
-              CDMX<span style={{ color: 'var(--claude-coral)' }}>MCP</span>
+              MCP<span style={{ color: 'var(--claude-coral)' }}> CDMX</span>
             </span>
           </div>
 
