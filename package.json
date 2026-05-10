@@ -1,0 +1,16 @@
+{
+  "name": "claudeimpact-landing-workspace",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev:frontend": "npm run dev --prefix frontend",
+    "dev:bff": "npm run dev --prefix copilot-bff",
+    "dev:agent": "npm run dev --prefix mcpproject/apps/agent",
+    "dev:mcp": "npm run dev --prefix mcp-mx/mcp_server",
+    "dev:infra": "docker compose --env-file .env -f deployment/docker-compose.yml up -d --wait",
+    "dev": "concurrently -k -n frontend,bff,agent,mcp -c blue,green,yellow,magenta \"npm run dev:frontend\" \"npm run dev:bff\" \"npm run dev:agent\" \"npm run dev:mcp\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
